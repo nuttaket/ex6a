@@ -55,10 +55,10 @@
 				u1 = "Fahrenheit";
 			}else if(u == "K"){
 				t1 =  t + 273.15;
-				u1 = "Réaumur";
+				u1 = "Kelvin";
 			}else if(u == "R"){
 				t1 = t * (4/5);
-				u1 = "Kelvin";
+				u1 = "Réaumur";
 			}
 			return {"temp":t1,"unit":u1};
 		}
@@ -71,7 +71,9 @@
 			   
 			   var result = calculate(t,u);
 			   
-			   alert("Temperature is "+t1+" in "+u1);
+			   //alert("Temperature is "+t1+" in "+u1);
+			   $("#result").html("Temperature is <b>"+
+					result.temp+"</b> in "+result.unit);
 			});
 		});
 	</script>
